@@ -9,7 +9,6 @@ function uploadImage()
         let image = document.createElement("img");
         image.classList.add("image-item");
         image.src = URL.createObjectURL(uploadInput.files[i]);
-        // image.onload = function() { URL.revokeObjectURL(item.src); }; // free memory
 
         imageContainer.append(image); 
     }

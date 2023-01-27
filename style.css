@@ -30,12 +30,17 @@ tr:hover {
 
 #uploaded-image-container {
     display: flex;
-    gap: .5em;
+    gap: .25em;
 }
 
 .image-item {
     width: 200px;
     aspect-ratio: 5 / 4;
-
+    padding: .25em;
+    
     object-fit: cover;
+}
+
+.image-item:hover {
+    padding: 0;
 }
