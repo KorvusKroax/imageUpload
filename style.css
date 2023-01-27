@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+body {
+    max-width: min(calc(100% - 1em), 70em);
+    margin-inline: auto;
+}
+
 table {
     border-collapse: collapse;
 }

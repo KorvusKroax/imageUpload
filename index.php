@@ -15,13 +15,17 @@
             <th>title</th>
             <th>images</th>
         </tr>
-        <?php foreach($articles as $article) : ?>
-            <tr onclick="location.href='post_view.php?id=<?= $article["id"] ?>'">
-                <td><?= $article["id"] ?></td>
-                <td><?= $article["title"] ?></td>
-                <td><?= $article["images"] ?></td>
-            </tr>
-        <?php endforeach; ?>
+        <?php if(empty($articles)) : ?>
+            <tr><td colspan="3">no article..</td></tr>
+        <?php else : ?>
+            <?php foreach($articles as $article) : ?>
+                <tr onclick="location.href='post_view.php?id=<?= $article["id"] ?>'">
+                    <td><?= $article["id"] ?></td>
+                    <td><?= $article["title"] ?></td>
+                    <td><?= $article["images"] ?></td>
+                </tr>
+            <?php endforeach; ?>
+        <?php endif; ?>
     </table>
     <br>
     <button onclick="location.href='post_add.php'">add new</button><br>
