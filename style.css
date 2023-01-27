@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    padding: .5em;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+td {
+    padding: .5em;
+    color: black;
+    border: 1px solid black;
+}
+
+tr:hover {
+    background-color: lightblue;
+}
+
+#input-image-container {
+    display: flex;
+    gap: .5em;
+}
+
+#uploaded-image-container {
+    display: flex;
+    gap: .5em;
+}
+
+.image-item {
+    width: 200px;
+    aspect-ratio: 5 / 4;
+
+    object-fit: cover;
+}
