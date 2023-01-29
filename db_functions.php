@@ -1,6 +1,6 @@
 <?php
     define("DB_DRIVER", "mysql");
-    define("DB_NAME", "posts");
+    define("DB_NAME", "image_groups");
     define("DB_HOST", "localhost");
     define("DB_USER", "root");
     define("DB_PASSWORD", "");

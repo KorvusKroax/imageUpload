@@ -63,18 +63,6 @@ tr:hover {
     object-fit: cover;
 }
 
-.image-item:not(.no-select) {
-    padding: .3em;
-}
-
-.image-item:not(.no-select):hover {
-    padding: 0;
-}
-
-.image-item-holder:first-child {
-    outline: .25em solid red;
-}
-
 
 
 .button {
@@ -119,4 +107,18 @@ tr:hover {
     background-color: transparent;
     color: transparent;
     border: none;
+}
+
+
+
+#uploaded-image-container > :first-child {
+    outline: .25em solid red;
+}
+
+#uploaded-image-container > :not(:first-child) img:not(.no-select) {
+    padding: .3em;
+}
+
+#uploaded-image-container > :not(:first-child) img:not(.no-select):hover {
+    padding: 0;
 }

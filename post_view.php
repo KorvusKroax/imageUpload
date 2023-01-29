@@ -23,7 +23,9 @@
 
     <div id="uploaded-image-container" class="image-container">
         <?php foreach($images as $imagePath) : ?>
-            <img class="image-item no-select" src="uploads/<?= $imagePath ?>">
+            <div class="image-item-holder">
+                <img class="image-item no-select" src="uploads/<?= $imagePath ?>">
+            </div>
         <?php endforeach; ?>
     </div>
     <br>
