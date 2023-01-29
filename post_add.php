@@ -1,6 +1,8 @@
 <?php
     require("db_functions.php");
 
+
+
     $title = (isset($_POST["title"])) ? $_POST["title"] : "";
 
 
@@ -10,7 +12,7 @@
         if (($key = array_search($_GET["select"], $_SESSION["images"])) !== false)
         {
             $tmp = $_SESSION["images"][0];
-            $_SESSION["images"][0] = $_GET["select"];
+            $_SESSION["images"][0] = $_SESSION["images"][$key];
             $_SESSION["images"][$key] = $tmp;
         }
     }
@@ -22,6 +24,8 @@
         if (($key = array_search($_GET["remove"], $_SESSION["images"])) !== false)
         {
             unset($_SESSION["images"][$key]);
+            $_SESSION["images"] = array_values($_SESSION["images"]);
+
             unlink("tmp/" . $_GET["remove"]);
         }
     }
@@ -102,7 +106,7 @@
                 <?php foreach($_SESSION["images"] as $imagePath) : ?>
                     <div class="image-item-holder">
                         <button class="remove-button" onclick="location.href='post_add.php?remove=<?= $imagePath ?>'"><b>x</b></button>
-                        <a href="?select=<?= $imagePath ?>"><img class="image-item" src="tmp/<?= $imagePath ?>"></a>
+                        <button class="image-button" onclick="location.href='post_add.php?select=<?= $imagePath ?>'"><img class="image-item" src="tmp/<?= $imagePath ?>"></button>
                     </div>
                 <?php endforeach; ?>
             </div>

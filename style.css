@@ -87,6 +87,7 @@ tr:hover {
     border: none;
 
     cursor: pointer;
+    user-select: none;
 }
 
 .remove-button {
@@ -102,9 +103,20 @@ tr:hover {
     border: none;
 
     cursor: pointer;
+    user-select: none;
 }
 
 .remove-button:hover {
     background-color: red;
     color: white;
+}
+
+
+
+.image-button {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    color: transparent;
+    border: none;
 }
