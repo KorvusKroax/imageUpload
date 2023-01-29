@@ -9,8 +9,6 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <script src="script.js" defer></script>
-
     <title>imageUpload</title>
 </head>
 

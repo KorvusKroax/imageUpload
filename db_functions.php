@@ -7,8 +7,10 @@
 
 
 
+    session_start();
 
 
+    
     if (!isDatabaseExists()) createDatabase();
     if (!isTableExists("articles")) createTable_articles();
 

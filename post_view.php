@@ -13,17 +13,22 @@
 <?php require("header.php"); ?>
 
 <main>
-    <span>id: <?= $id ?></span><br>
+    <span><b>ID:</b> <?= $id ?></span>
     <br>
-    <span>title: <?= $title ?></span><br>
     <br>
-    <div id='uploaded-image-container'>
-        <?php foreach($images as $image) : ?>
-            <img class="image-item" src="uploads/<?= $image ?>">
+    
+    <span><b>Cím:</b> <?= $title ?></span>
+    <br>
+    <br>
+
+    <div id="uploaded-image-container" class="image-container">
+        <?php foreach($images as $imagePath) : ?>
+            <img class="image-item no-select" src="uploads/<?= $imagePath ?>">
         <?php endforeach; ?>
     </div>
     <br>
-    <button onclick="location.href='index.php'">back</button><br>
+
+    <button class="button" onclick="location.href='index.php'">Vissza</button>
 </main>
 
 <?php require("footer.php"); ?>

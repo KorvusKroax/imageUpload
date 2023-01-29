@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
@@ -7,45 +7,104 @@ body {
     margin-inline: auto;
 }
 
+
+
+
+
 table {
     border-collapse: collapse;
 }
 
 th {
     padding: .5em;
+
     background-color: black;
     color: white;
+
     border: 1px solid white;
 }
 
 td {
     padding: .5em;
+
     color: black;
+
     border: 1px solid black;
 }
 
 tr:hover {
     background-color: lightblue;
+
+    cursor: pointer;
 }
 
-#input-image-container {
+
+
+.input-text {
+    padding: .5em;
+}
+
+
+
+.image-container {
     display: flex;
     gap: .5em;
+    flex-wrap: wrap;
 }
 
-#uploaded-image-container {
-    display: flex;
-    gap: .25em;
+.image-item-holder {
+    position: relative;
 }
 
 .image-item {
-    width: 200px;
+    width: 300px;
     aspect-ratio: 5 / 4;
-    padding: .25em;
-    
+
     object-fit: cover;
 }
 
-.image-item:hover {
+.image-item:not(.no-select) {
+    padding: .3em;
+}
+
+.image-item:not(.no-select):hover {
     padding: 0;
+}
+
+.image-item-holder:first-child {
+    outline: .25em solid red;
+}
+
+
+
+.button {
+    padding: .5em 1.5em;
+    margin: 0;
+
+    background-color: darkslategray;
+    color: white;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.remove-button {
+    padding: .5em;
+
+    position: absolute;
+    top: .5em;
+    right: .5em;
+
+    background-color: rgb(255, 255, 255, .5);
+    color: black;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: red;
+    color: white;
 }
