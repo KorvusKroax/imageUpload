@@ -106,7 +106,7 @@
                 <?php foreach($_SESSION["images"] as $imagePath) : ?>
                     <div class="image-item-holder">
                         <button class="remove-button" onclick="location.href='post_add.php?remove=<?= $imagePath ?>'"><b>x</b></button>
-                        <button class="image-button" onclick="location.href='post_add.php?select=<?= $imagePath ?>'"><img class="image-item" src="tmp/<?= $imagePath ?>"></button>
+                        <img class="image-item" src="tmp/<?= $imagePath ?>" onclick="location.href='post_add.php?select=<?= $imagePath ?>'">
                     </div>
                 <?php endforeach; ?>
             </div>
